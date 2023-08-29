@@ -9,11 +9,20 @@
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <button type="button" style="background-color: rosybrown" data-start>
+    <button type="button" style="background-color: rosybrown" id="dataStart">
       Start
     </button>
-    <button type="button" data-stop>Stop</button>
+    <button type="button" id="stop">Stop</button>
 
     <script src="js/01-color-switcher.js" type="module"></script>
+    <script>
+      document.getElementById('dataStart').onclick = function () {
+        document.querySelector('body').style.backgroundColor = Math.floor(
+          Math.random() * 16777215
+        )
+          .toString(16)
+          .padStart(6, 0);
+      };
+    </script>
   </body>
 </html>
