@@ -1,7 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-const selector = document.querySelectorAll('input[datetime-picker]');
-flatpickr(selector, options);
+const selector = document.querySelector('input');
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -9,9 +8,14 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     console.log(selectedDates[0]);
+    if (parseInt(selectedDates[0]) < 2023) {
+      console.log(`Please choose date in the future`);
+    }
   },
 };
-function convertMs(ms) {
+flatpickr(selector, options);
+
+export default function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
   const minute = second * 60;
