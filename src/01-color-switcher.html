@@ -26,7 +26,8 @@
       const number = 1;
       document
         .getElementById('dataStart')
-        .addEventListener('click', function callFunction(onClick, n = 12) {
+        .addEventListener('click', function callFunction(onClick, n) {
+          let n = 60;
           for (let i = 1; i < n; i++) {
             onClick();
           }
