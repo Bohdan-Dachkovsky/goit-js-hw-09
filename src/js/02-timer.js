@@ -1,5 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+const selector = document.getElementById('datetime-picker');
 flatpickr(selector, options);
 const options = {
   enableTime: true,
