@@ -16,14 +16,22 @@
 
     <script src="js/01-color-switcher.js" type="module"></script>
     <script>
+      function onClick() {
+        document.querySelector('body').style.backgroundColor = `#${Math.floor(
+          Math.random() * 16777215
+        )
+          .toString(16)
+          .padStart(6, 0)}`;
+      }
+      const number = 1;
       document
         .getElementById('dataStart')
-        .addEventListener('click', function onClick() {
-          document.querySelector('body').style.backgroundColor = `#${Math.floor(
-            Math.random() * 16777215
-          )
-            .toString(16)
-            .padStart(6, 0)}`;
+        .addEventListener('click', function callFunction(onClick, number) {
+          let i = 1;
+          while (i <= number) {
+            onClick();
+            i++;
+          }
         });
       document
         .getElementById('stop')
