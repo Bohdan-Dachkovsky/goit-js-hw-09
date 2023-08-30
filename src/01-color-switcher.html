@@ -23,14 +23,7 @@
           .toString(16)
           .padStart(6, 0)}`;
       };
-      const number = 1;
-      document
-        .getElementById('dataStart')
-        .addEventListener('click', function callFunction(onClick) {
-          for (let i = 1; i < 12; i++) {
-            onClick();
-          }
-        });
+      document.getElementById('dataStart').addEventListener('click', onClick());
       document
         .getElementById('stop')
         .addEventListener('click', function eventClose() {
