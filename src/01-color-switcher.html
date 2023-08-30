@@ -16,9 +16,6 @@
 
     <script src="js/01-color-switcher.js" type="module"></script>
     <script>
-      function eventClose() {
-        document.querySelector('body').style.backgroundColor = fafafa;
-      }
       document
         .getElementById('dataStart')
         .addEventListener('click', function onClick() {
@@ -30,7 +27,9 @@
         });
       document
         .getElementById('stop')
-        .removeEventListener('click', eventClose());
+        .removeEventListener('click', function eventClose() {
+          document.querySelector('body').style.backgroundColor = fafafa;
+        });
     </script>
   </body>
 </html>
