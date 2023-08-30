@@ -16,7 +16,8 @@
 
     <script src="js/01-color-switcher.js" type="module"></script>
     <script>
-      function onClick() {
+      function onClick(event) {
+        event.preventDefault();
         document.querySelector('body').style.backgroundColor = `#${Math.floor(
           Math.random() * 16777215
         )
