@@ -30,6 +30,6 @@ export default function convertMs(ms) {
   const minutes = Math.floor(((ms % day) % hour) / minute);
   // Remaining seconds
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
-
-  return { days, hours, minutes, seconds };
+  const timer = document.getElementsByClassName('value');
+  timer.textContent = days;
 }
